@@ -2,10 +2,10 @@ package se.askware.aoc2023.common;
 
 public class Range {
 
-	public int start;
-	public int end;
+	public long start;
+	public long end;
 
-	public Range(int start, int end) {
+	public Range(long start, long end) {
 		this.start = start;
 		this.end = end;
 	}
@@ -15,7 +15,7 @@ public class Range {
 		return new Range(Integer.parseInt(split[0]), Integer.parseInt(split[1]));
 	}
 
-	public boolean contains(Range other){
+	public boolean isCoveredBy(Range other){
 		return start >= other.start && end <= other.end;
 	}
 

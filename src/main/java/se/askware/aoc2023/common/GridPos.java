@@ -18,5 +18,8 @@ public class GridPos extends Pair<Integer> {
 		return new GridPos(getRow() + other.getRow(), getCol() + other.getCol());
 	}
 
+	public int distance(GridPos other){
+		return Math.abs(getRow() - other.getRow()) + Math.abs(getCol() - other.getCol());
+	}
 
 }
